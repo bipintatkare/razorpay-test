@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>Payment</title>
+</head>
+
+<body>
+    <h1 style="text-align:center;">Payment Gateway</h1>
+    <div class="container" style="text-align: center;">
+        <form action="{% url 'payment' %}" method="POST">
+            {% csrf_token %}
+            <input type="number" name="payment-amount">
+            <br>
+            <button type="submit" style="margin-top: 10px;">
+                Make Payment
+            </button>
+        </form>
+    </div>
+</body>
+</html>
